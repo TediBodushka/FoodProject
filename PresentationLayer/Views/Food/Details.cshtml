@@ -1,0 +1,21 @@
+﻿@model BusinessLayer.Food
+
+<h2>Food Details</h2>
+
+<div class="card shadow-sm mt-3">
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-sm-3">Name</dt>
+            <dd class="col-sm-9">@Model.Name</dd>
+
+            <dt class="col-sm-3">Quantity</dt>
+            <dd class="col-sm-9">@Model.Quantity</dd>
+
+            <dt class="col-sm-3">Price</dt>
+            <dd class="col-sm-9">@Model.Price.ToString("0.00")</dd>
+        </dl>
+
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+        <a asp-action="Index" class="btn btn-secondary">Back</a>
+    </div>
+</div>
